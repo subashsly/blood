@@ -19,7 +19,9 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
-
+  
 production:
   <<: *default
+  adapter: postgresql
+  prepared_statements: false
   database: db/production.sqlite3
