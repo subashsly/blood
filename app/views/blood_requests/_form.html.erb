@@ -1,0 +1,62 @@
+<%= form_with(model: blood_request, local: true) do |form| %>
+  <% if blood_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blood_request.errors.count, "error") %> prohibited this blood_request from being saved:</h2>
+
+      <ul>
+      <% blood_request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :patient_name %>
+    <%= form.text_field :patient_name, id: :blood_request_patient_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blood_group %>
+    <%= form.number_field :blood_group, id: :blood_request_blood_group %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hospital_name %>
+    <%= form.text_field :hospital_name, id: :blood_request_hospital_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :blood_request_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :blood_request_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_name %>
+    <%= form.text_field :contact_name, id: :blood_request_contact_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :blood_request_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :blood_request_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :required_date %>
+    <%= form.datetime_select :required_date, id: :blood_request_required_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

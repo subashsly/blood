@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blood Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Patient name</th>
+      <th>Blood group</th>
+      <th>Hospital name</th>
+      <th>City</th>
+      <th>Address</th>
+      <th>Contact name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Required date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blood_requests.each do |blood_request| %>
+      <tr>
+        <td><%= blood_request.patient_name %></td>
+        <td><%= blood_request.blood_group %></td>
+        <td><%= blood_request.hospital_name %></td>
+        <td><%= blood_request.city %></td>
+        <td><%= blood_request.address %></td>
+        <td><%= blood_request.contact_name %></td>
+        <td><%= blood_request.email %></td>
+        <td><%= blood_request.phone %></td>
+        <td><%= blood_request.required_date %></td>
+        <td><%= link_to 'Show', blood_request %></td>
+        <td><%= link_to 'Edit', edit_blood_request_path(blood_request) %></td>
+        <td><%= link_to 'Destroy', blood_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blood Request', new_blood_request_path %>

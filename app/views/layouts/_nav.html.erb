@@ -1,0 +1,100 @@
+
+
+
+    <header class="main-header">
+        
+    
+        <nav class="navbar navbar-static-top">
+
+            <div class="navbar-top">
+
+              <div class="container">
+                  <div class="row">
+
+                    <div class="col-sm-6 col-xs-12">
+
+                        <ul class="list-unstyled list-inline header-contact">
+                            <li> <i class="fa fa-phone"></i> <a href="tel:">+977 9843453152 </a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a href="mailto:contact@sushantdsuwal@gmail.com">sushantdsuwal@gmail.com</a> </li>
+                       </ul> <!-- /.header-contact  -->
+                      
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12 text-right">
+
+                        <ul class="list-unstyled list-inline header-social">
+
+                            <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-twitter"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-google"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-youtube"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa fa-pinterest-p"></i>  </a> </li>
+                       </ul> <!-- /.header-social  -->
+                      
+                    </div>
+
+
+                  </div>
+              </div>
+
+            </div>
+
+            <div class="navbar-main">
+              
+              <div class="container">
+
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                  </button>
+                  
+                  <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                  
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse pull-right">
+
+                  <ul class="nav navbar-nav">
+
+                    <li><a class="is-active" href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <!-- <li class="has-child"><a href="#">WHO CAN GIVE BLOOD</a>
+
+                      <ul class="submenu">
+                         <li class="submenu-item"><a href="causes.html">Can i give blood?</a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Health and Eligibility</a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Donors and disability </a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Single cause </a></li>
+                      </ul>
+
+                    </li> -->
+                    
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <%if user_signed_in? %>
+                    <li><%= link_to " Blood Request",   blood_requests_path  %></li>
+                    <li><%= link_to "Notification",  blood_donates_path  %></li>
+                    <li><%= link_to "Blood Donates",  new_user_session_path  %></li>
+                      <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
+                    <% else %>
+                    <li><%= link_to "User Queries",   user_queries_path  %></li>
+                    <li><%= link_to "Login",  new_user_session_path  %></li>
+                    <li><%= link_to "Sign Up", new_user_registration_path %></li>
+                    <% end %>  
+
+                  </ul>
+
+                </div> <!-- /#navbar -->
+
+              </div> <!-- /.container -->
+              
+            </div> <!-- /.navbar-main -->
+
+
+        </nav> 
+
+    </header> <!-- /. main-header -->

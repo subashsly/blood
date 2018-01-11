@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  blood_request: one
+  donate_date: 2018-01-10 21:10:49
+
+two:
+  user: two
+  blood_request: two
+  donate_date: 2018-01-10 21:10:49

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Full name:</strong>
+  <%= @user_query.full_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user_query.email %>
+</p>
+
+<p>
+  <strong>Phone no:</strong>
+  <%= @user_query.phone_no %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user_query.address %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @user_query.subject %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @user_query.message %>
+</p>
+
+<%= link_to 'Edit', edit_user_query_path(@user_query) %> |
+<%= link_to 'Back', user_queries_path %>

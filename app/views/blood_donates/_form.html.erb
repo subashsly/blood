@@ -1,0 +1,32 @@
+<%= form_with(model: blood_donate, local: true) do |form| %>
+  <% if blood_donate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blood_donate.errors.count, "error") %> prohibited this blood_donate from being saved:</h2>
+
+      <ul>
+      <% blood_donate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :blood_donate_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blood_request_id %>
+    <%= form.text_field :blood_request_id, id: :blood_donate_blood_request_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :donate_date %>
+    <%= form.datetime_select :donate_date, id: :blood_donate_donate_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

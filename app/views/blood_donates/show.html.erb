@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @blood_donate.user %>
+</p>
+
+<p>
+  <strong>Blood request:</strong>
+  <%= @blood_donate.blood_request %>
+</p>
+
+<p>
+  <strong>Donate date:</strong>
+  <%= @blood_donate.donate_date %>
+</p>
+
+<%= link_to 'Edit', edit_blood_donate_path(@blood_donate) %> |
+<%= link_to 'Back', blood_donates_path %>

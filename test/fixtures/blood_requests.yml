@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_name: MyString
+  blood_group: 1
+  hospital_name: MyString
+  city: MyString
+  address: MyString
+  contact_name: MyString
+  email: MyString
+  phone: MyString
+  required_date: 2018-01-10 20:44:55
+
+two:
+  patient_name: MyString
+  blood_group: 1
+  hospital_name: MyString
+  city: MyString
+  address: MyString
+  contact_name: MyString
+  email: MyString
+  phone: MyString
+  required_date: 2018-01-10 20:44:55
