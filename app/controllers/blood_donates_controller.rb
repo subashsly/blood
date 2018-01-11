@@ -1,6 +1,6 @@
 class BloodDonatesController < ApplicationController
   before_action :set_blood_donate, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /blood_donates
   # GET /blood_donates.json
   def index

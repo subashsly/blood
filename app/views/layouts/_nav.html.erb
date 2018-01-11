@@ -77,7 +77,7 @@
                     <li><%= link_to "CONTACT", contact_path %></li>
                     <%if user_signed_in? %>
                     <li><%= link_to " Blood Request",   blood_requests_path  %></li>
-                    <li><%= link_to "Notification",  blood_donates_path  %></li>
+                    <li><%= link_to "Notification",  notifications_path  %></li>
                     <li><%= link_to "Blood Donates",  new_user_session_path  %></li>
                       <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
                     <% else %>
