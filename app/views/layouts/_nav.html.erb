@@ -61,8 +61,8 @@
 
                   <ul class="nav navbar-nav">
 
-                    <li><a class="is-active" href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
+                    <li><%= link_to "HOME", root_path, class: "is-active"%></li>
+                    <li><%= link_to "ABOUT", about_path %></li>
                     <!-- <li class="has-child"><a href="#">WHO CAN GIVE BLOOD</a>
 
                       <ul class="submenu">
@@ -74,7 +74,7 @@
 
                     </li> -->
                     
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><%= link_to "CONTACT", contact_path %></li>
                     <%if user_signed_in? %>
                     <li><%= link_to " Blood Request",   blood_requests_path  %></li>
                     <li><%= link_to "Notification",  blood_donates_path  %></li>
