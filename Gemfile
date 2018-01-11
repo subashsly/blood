@@ -52,7 +52,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  gem 'byebug'
+  # gem 'byebug'
  # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
   # gem 'rspec-rails'
