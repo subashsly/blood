@@ -22,7 +22,10 @@
 
                   <h2 class="carousel-title bounceInDown animated slow">Because they need your help</h2>
                   <h4 class="carousel-subtitle bounceInUp animated slow ">Do not let them down</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">JOIN WITH US </a>
+                  <!-- <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">JOIN WITH US </a> -->
+                   <%if !user_signed_in? %>
+                  <%= link_to "JOIN WITH US", new_user_registration_path, class: "btn btn-lg btn-secondary  bounceInUp animated slow" %>
+                  <% end %>
 
                 </div> <!-- /.carousel-caption -->
 
@@ -41,7 +44,9 @@
 
                   <h2 class="carousel-title bounceInDown animated slow">Together we can improve their lives</h2>
                   <h4 class="carousel-subtitle bounceInUp animated slow"> So let's do it !</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal" data-target="#donateModal">JOIN WITH US</a>
+                 <%if !user_signed_in? %>
+                  <%= link_to "JOIN WITH US", new_user_registration_path, class: "btn btn-lg btn-secondary  bounceInUp animated slow" %>
+                  <% end%>
 
                 </div> <!-- /.carousel-caption -->
 
@@ -62,8 +67,9 @@
 
                   <h2 class="carousel-title bounceInDown animated slow" >Save a life, Give blood</h2>
                   <h4 class="carousel-subtitle bounceInUp animated slow">You can make the diffrence !</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">JOIN WITH US</a>
-
+                   <%if !user_signed_in? %>
+                    <%= link_to "JOIN WITH US", new_user_registration_path, class: "btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" %>
+                  <% end%>
                 </div> <!-- /.carousel-caption -->
 
               </div>
@@ -242,7 +248,9 @@
       
 
     </div> <!-- /.home-reasons -->
+    
 
+<%= render "layouts/footer" %> 
    
 
 

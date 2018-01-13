@@ -1,4 +1,5 @@
-<%= form_with(model: blood_request, local: true) do |form| %>
+
+<%= form_with(model: blood_request, remote: true) do |form| %>
   <% if blood_request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(blood_request.errors.count, "error") %> prohibited this blood_request from being saved:</h2>
@@ -11,52 +12,54 @@
     </div>
   <% end %>
 
-  <div class="field">
+ <div class="row">
+    <div class="form-group col-md-6">
     <%= form.label :patient_name %>
-    <%= form.text_field :patient_name, id: :blood_request_patient_name %>
+    <%= form.text_field :patient_name, id: :blood_request_patient_name , class: "form-control", placeholder: "Patient Name*", :required => true%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= form.label :blood_group %>
-    <%= form.number_field :blood_group, id: :blood_request_blood_group %>
+    <%= form.select(:blood_group, [ "O+ve", "O-ve", "A+ve","A-ve","B+ve","B-ve","AB+ve","AB-ve"], { :prompt => 'Select Blood Group'}, { :class => 'form-control',:required => true }) %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= form.label :hospital_name %>
-    <%= form.text_field :hospital_name, id: :blood_request_hospital_name %>
+    <%= form.text_field :hospital_name, id: :blood_request_hospital_name,class: "form-control", placeholder: "Hospital Name" %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= form.label :city %>
-    <%= form.text_field :city, id: :blood_request_city %>
+    <%= form.text_field :city, id: :blood_request_city ,class: "form-control", placeholder: "city*", :required => true%>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= form.label :address %>
-    <%= form.text_field :address, id: :blood_request_address %>
+    <%= form.text_field :address, id: :blood_request_address,class: "form-control", placeholder: "address*", :required => true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= form.label :contact_name %>
-    <%= form.text_field :contact_name, id: :blood_request_contact_name %>
+    <%= form.text_field :contact_name, id: :blood_request_contact_name ,class: "form-control", placeholder: "Contact Name*", :required => true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= form.label :email %>
-    <%= form.text_field :email, id: :blood_request_email %>
+    <%= form.text_field :email, id: :blood_request_email,class: "form-control", placeholder: "email*", :required => true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= form.label :phone %>
-    <%= form.text_field :phone, id: :blood_request_phone %>
+    <%= form.telephone_field :phone, id: :blood_request_phone,class: "form-control", placeholder: "Phone*", :required => true %>
   </div>
 
-  <div class="field">
+  <div class="form-group col-md-6">
     <%= form.label :required_date %>
-    <%= form.datetime_select :required_date, id: :blood_request_required_date %>
+    <%= form.date_select :required_date, id: :blood_request_required_date ,class: "form-control hasDatepicker", placeholder: " Required Date*", :required => true%>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group col-md-6">
+    <%= form.submit "Send Request", class: "form-control btn btn-primary" %>
   </div>
+</div>
 <% end %>

@@ -1,4 +1,4 @@
-<%= form_with(model: user_query, local: true) do |form| %>
+<%= form_with(model: user_query, remote: true) do |form| %>
   <% if user_query.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user_query.errors.count, "error") %> prohibited this user_query from being saved:</h2>
@@ -11,37 +11,45 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :full_name %>
-    <%= form.text_field :full_name, id: :user_query_full_name %>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <%= form.label :full_name %>
+      <%= form.text_field :full_name, id: :user_query_full_name, class: "form-control", placeholder: "Full Name*", :required => true %>
+    </div>
+  
+
+    <div class="form-group col-md-6">
+      <%= form.label :email %>
+      <%= form.text_field :email, id: :user_query_email, class: "form-control", placeholder: "Email*", :required => true %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :user_query_email %>
-  </div>
-
-  <div class="field">
+<div class="row">
+    <div class="form-group col-md-6">
     <%= form.label :phone_no %>
-    <%= form.text_field :phone_no, id: :user_query_phone_no %>
+    <%= form.text_field :phone_no, id: :user_query_phone_no, class: "form-control", placeholder: "Phone no.*", :required => true %>
   </div>
 
-  <div class="field">
+    <div class="form-group col-md-6">
     <%= form.label :address %>
-    <%= form.text_field :address, id: :user_query_address %>
+    <%= form.text_field :address, id: :user_query_address, class: "form-control", placeholder: "Address*", :required => true %>
   </div>
+</div>
 
-  <div class="field">
+   <div class="form-group">
     <%= form.label :subject %>
-    <%= form.text_field :subject, id: :user_query_subject %>
+     
+     <%= form.select(:subject, [ "Helplineve", "Marketing", "Others"], { :prompt => 'Select Subject'}, { :class => 'form-control' }) %>
+
   </div>
 
-  <div class="field">
+   <div class="form-group">
     <%= form.label :message %>
-    <%= form.text_area :message, id: :user_query_message %>
+    <%= form.text_area :message, id: :user_query_message, class: "form-control",rows: "5", placeholder: "Drop Your Message*", :required => true %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+   <div class="form-group">
+    <%= form.submit "Send Message", class: "form-control btn btn-primary pull-right" %>
   </div>
+  <div class="clearfix"></div>
 <% end %>

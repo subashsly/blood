@@ -1,6 +1,6 @@
 
 
-	<div class="page-heading text-center">
+<!-- 	<div class="page-heading text-center">
 
 		<div class="container zoomIn animated">
 			
@@ -11,7 +11,7 @@
 			
 		</div>
 
-	</div>
+	</div> -->
 
 	<div class="main-container fadeIn animated">
 
@@ -19,11 +19,17 @@
 
 			<div class="row">
 
+				<div class="isa_success hidden">
+     				<i class="fa fa-check"></i>	
+				</div>
+
+
 				<div class="col-md-7 col-sm-12 col-form">
 
 					<h2 class="title-style-2">CONTACT FORM <span class="title-under"></span></h2>
 
-					<form action="php/mail.php" class="contact-form ajax-form">
+					<%= render 'user_queries/form', user_query: @user_query %>
+					<!-- <form action="php/mail.php" class="contact-form ajax-form">
 
 						<div class="row">
 
@@ -59,7 +65,7 @@
 
                         <div class="clearfix"></div>
 
-					</form>
+					</form> -->
 
 				</div>
 

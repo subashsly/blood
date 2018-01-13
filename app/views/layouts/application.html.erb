@@ -3,6 +3,7 @@
   <head>
     <title>DonateBlood</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,15 +12,14 @@
 
   <body>
     <%if !notice.nil? || !alert.nil?%>
-  	 <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+  	<!--  <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p> -->
     <%end%>
     <%= render "layouts/nav" %>
-           <%= yield %>
-     <%= render "layouts/footer" %>      
+           <%= yield %>     
 
     <!-- Donate Modal -->
-    <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true">
+ <!--    <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true">
 
       <div class="modal-dialog">
         <div class="modal-content">
@@ -88,7 +88,11 @@
         </div>
       </div>
 
-    </div> <!-- /.modal -->
+    </div> <!- /.modal -->
+ 
+
+    <div id="login-modal" class="modal fade" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true"></div>
+
 
   </body>
 </html>

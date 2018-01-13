@@ -16,6 +16,8 @@
                         <ul class="list-unstyled list-inline header-contact">
                             <li> <i class="fa fa-phone"></i> <a href="tel:">+977 9843453152 </a> </li>
                              <li> <i class="fa fa-envelope"></i> <a href="mailto:contact@sushantdsuwal@gmail.com">sushantdsuwal@gmail.com</a> </li>
+
+
                        </ul> <!-- /.header-contact  -->
                       
                     </div>
@@ -23,7 +25,7 @@
                     <div class="col-sm-6 col-xs-12 text-right">
 
                         <ul class="list-unstyled list-inline header-social">
-
+<li> <i class="fa fa-email"></i> <a href=""><%= current_user.email if user_signed_in? %></a> </li>
                             <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
                             <li> <a href="#"> <i class="fa fa-twitter"></i>  </a> </li>
                             <li> <a href="#"> <i class="fa fa-google"></i>  </a> </li>
@@ -75,14 +77,17 @@
                     </li> -->
                     
                     <li><%= link_to "CONTACT", contact_path %></li>
+                    
                     <%if user_signed_in? %>
-                    <li><%= link_to " Blood Request",   blood_requests_path  %></li>
+                    
                     <li><%= link_to "Notification",  notifications_path  %></li>
-                    <li><%= link_to "Blood Donates",  new_user_session_path  %></li>
+                    <li><%= link_to "Blood Donates",  blood_donates_path  %></li>
+                    <li><%= link_to "User Queries",  user_queries_path  %></li>
+                    <li><%= link_to " Show Blood Request", blood_requests_path  %></li>
                       <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
                     <% else %>
-                    <li><%= link_to "User Queries",   user_queries_path  %></li>
-                    <li><%= link_to "Login",  new_user_session_path  %></li>
+                    <li><%= link_to " Blood Request", new_blood_request_path  %></li>
+                    <li><%= link_to "Login",  new_user_session_path, remote: true %></li>
                     <li><%= link_to "Sign Up", new_user_registration_path %></li>
                     <% end %>  
 

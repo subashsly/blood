@@ -1,0 +1,9 @@
+<% if current_user.nil? %>
+	$("#login-modal").modal("hide");
+	alert("asda");
+	<% else %>
+	
+	$("#login-modal").modal("hide");
+	window.location.replace("http://localhost:3000");
+
+<% end %>

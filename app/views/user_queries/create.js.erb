@@ -1,0 +1,7 @@
+$('form').trigger("reset");
+$(".isa_success").append("<%=j flash[:notice] %>")
+$(".isa_success").removeClass('hidden')
+<% flash.clear%>
+setTimeout(function(){
+ 	 	$('.isa_success').slideUp(300);
+	}, 3000);

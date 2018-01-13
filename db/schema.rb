@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180110152549) do
+ActiveRecord::Schema.define(version: 20180113074738) do
 
   create_table "blood_donates", force: :cascade do |t|
     t.integer "user_id"
@@ -73,10 +73,22 @@ ActiveRecord::Schema.define(version: 20180110152549) do
     t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "gender"
+    t.string "phone_no"
+    t.string "telephone_no"
+    t.date "date_of_birth"
+    t.string "address"
+    t.string "city"
+    t.float "weight"
+    t.float "height"
+    t.integer "blood_group"
+    t.integer "times_donate"
+    t.string "zip_code"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index [nil], name: "index_users_on_unlock_token", unique: true
   end
 
 end

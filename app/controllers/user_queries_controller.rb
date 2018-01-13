@@ -1,6 +1,6 @@
 class UserQueriesController < ApplicationController
   before_action :set_user_query, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:new, :create]
   # GET /user_queries
   # GET /user_queries.json
   def index
@@ -24,18 +24,22 @@ class UserQueriesController < ApplicationController
   # POST /user_queries
   # POST /user_queries.json
   def create
-    @user_query = UserQuery.new(user_query_params)
-
+    @user_query = UserQuery.new(user_query_params)  
     respond_to do |format|
       if @user_query.save
+        format.js {  flash[:notice] = "Thanks for your message. We will contact you soon"}
         format.html { redirect_to @user_query, notice: 'User query was successfully created.' }
         format.json { render :show, status: :created, location: @user_query }
+        
       else
+        format.js { flash[:notice] = "Message send failed. Please try again."}
         format.html { render :new }
         format.json { render json: @user_query.errors, status: :unprocessable_entity }
       end
     end
   end
+
+
 
   # PATCH/PUT /user_queries/1
   # PATCH/PUT /user_queries/1.json

@@ -1,5 +1,6 @@
 class BloodRequestsController < ApplicationController
   before_action :set_blood_request, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:new, :create]
 
   # GET /blood_requests
   # GET /blood_requests.json
@@ -28,9 +29,11 @@ class BloodRequestsController < ApplicationController
 
     respond_to do |format|
       if @blood_request.save
+        format.js {  flash[:notice] = "Thanks for your request. We will contact you soon."}
         format.html { redirect_to @blood_request, notice: 'Blood request was successfully created.' }
         format.json { render :show, status: :created, location: @blood_request }
       else
+        format.js {  flash[:notice] = "Request failed, Please try again."}
         format.html { render :new }
         format.json { render json: @blood_request.errors, status: :unprocessable_entity }
       end
@@ -66,6 +69,9 @@ class BloodRequestsController < ApplicationController
     def set_blood_request
       @blood_request = BloodRequest.find(params[:id])
     end
+
+      
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blood_request_params

@@ -1,37 +1,112 @@
-<div class="row">
-  <div class="container">
-    <div class="col-md-4 col-md-offset-4">
-            <h2>Sign up</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        
+          <h3 class="title-style-1 text-center">Thank you for your Precious time <span class="title-under"></span>  </h3>
 
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "form-donation") do |f| %>
+            <%= devise_error_messages! %>
+            <ul class="errors"></ul>
 
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-        </div>
+             <div class="row">
+                <div class="form-group col-md-6">
+                  <%= f.label :first_name %><br />
+                  <%= f.text_field :first_name, class: "form-control", placeholder: "First Name *", required: true %>
+                </div>
 
-        <div class="field">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-        </div>
+             <div class="form-group col-md-6">
+              <%= f.label :last_name %><br />
+              <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name *", required: true %>
+            </div>
 
-        <div class="field">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-        </div>
 
-        <div class="actions">
-          <%= f.submit "Sign up", class: "form-control btn-primary" %>
-        </div>
-      <% end %>
+            <div class="form-group col-md-12">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email *", required: true %>
+            </div>
 
-      <%= render "users/shared/links" %>
+            <div class="form-group col-md-6">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off", class: "form-control" , placeholder: "Password*", required: true %>
+            </div>
+               <div class="form-group col-md-6">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password*", required: true %>
+            </div> 
 
+           <div class="form-group col-md-6">
+              <%= f.label :phone_no %><br />
+              <%= f.text_field :phone_no, class: "form-control", placeholder: "Phone no *", required: true %>
+            </div>
+
+
+
+         
+             <div class="form-group col-md-6">
+              <%= f.label :telephone_no %><br />
+              <%= f.text_field :telephone_no, class: "form-control", placeholder: "Telephone_no *", required: true %>
+            </div>
+             <div class="form-group col-md-6">
+              <%= f.label :address %><br />
+              <%= f.text_field :address, class: "form-control", placeholder: "Address *", required: true %>
+            </div>
+             <div class="form-group col-md-6">
+              <%= f.label :city %><br />
+              <%= f.text_field :city, class: "form-control", placeholder: "City *", required: true %>
+            </div>
+             <div class="form-group col-md-6">
+              <%= f.label :blood_group %><br />
+          
+              <%= f.select(:blood_group, [ "O+ve", "O-ve", "A+ve","A-ve","B+ve","B-ve","AB+ve","AB-ve"], { :prompt => 'Select Blood Group'}, { :class => 'form-control' }) %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label :times_donate %><br />
+              <%= f.text_field :times_donate, class: "form-control", placeholder: "Times Donate *", required: true %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label :zip_code %><br />
+              <%= f.text_field :zip_code, class: "form-control", placeholder: "Zip code *", required: true %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label :date_of_birth %><br />
+              <%= f.text_field :date_of_birth, class: "form-control", placeholder: "Date of birth *", required: true %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label :times_donate %><br />
+              <%= f.text_field :times_donate, class: "form-control", placeholder: "Times Donate *", required: true %>
+            </div>
+
+            
+            <div class="form-group col-md-6">
+              <%= f.label :weight %><br />
+              <%= f.text_field :weight, class: "form-control", placeholder: "Weight *", required: true %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label :gender %><br />
+              <%= f.radio_button :gender, "male"%> Male
+              <%= f.radio_button :gender, "female"%> Female
+              </div>
+
+
+           
+            <div class="form-group col-md-6">
+              <%= f.label :height %><br />
+              <%= f.text_field :height, class: "form-control", placeholder: "Height *", required: true %>
+            </div>
+
+            
+              <%= f.submit "Sign up", class: "form-control btn-primary" %>
+            
+          </div>
+          <% end %>
+
+          <%= render "users/shared/links" %>
     </div>
+    <div class="col-md-4"></div>
   </div>
 </div>
+
 

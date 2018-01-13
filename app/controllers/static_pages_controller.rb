@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+  	  @user_query = UserQuery.new
   end
 
 end
