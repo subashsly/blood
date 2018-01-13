@@ -444,6 +444,24 @@ form .alert {
   border: 1px solid #E44847 !important;
 }
 
+.btn-form {
+  background: #e54848 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius:none !important;
+  padding: 5px 25px !important;
+  border: 1px solid transparent !important;
+  -moz-transition: all, 0.3s !important;
+  -o-transition: all, 0.3s !important;
+  -webkit-transition: all, 0.3s !important;
+  transition: all, 0.3s !important;
+}
+.btn-form:hover {
+  background: #fff !important;
+  color: #E44847 !important;
+  border: 1px solid #E44847 !important;
+}
+
 .btn-secondary {
   background: #fff;
   color: #E44847;

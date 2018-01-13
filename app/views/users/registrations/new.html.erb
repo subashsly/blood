@@ -75,30 +75,29 @@
               <%= f.text_field :date_of_birth, class: "form-control", placeholder: "Date of birth *", required: true %>
             </div>
             <div class="form-group col-md-6">
-              <%= f.label :times_donate %><br />
-              <%= f.text_field :times_donate, class: "form-control", placeholder: "Times Donate *", required: true %>
+              <%= f.label :height %><br />
+              <%= f.text_field :height, class: "form-control", placeholder: "Height *", required: true %>
             </div>
-
             
             <div class="form-group col-md-6">
               <%= f.label :weight %><br />
               <%= f.text_field :weight, class: "form-control", placeholder: "Weight *", required: true %>
             </div>
-            <div class="form-group col-md-6">
+          
+
+
+             <div class="form-group col-md-6">
               <%= f.label :gender %><br />
               <%= f.radio_button :gender, "male"%> Male
               <%= f.radio_button :gender, "female"%> Female
               </div>
 
+            
 
            
-            <div class="form-group col-md-6">
-              <%= f.label :height %><br />
-              <%= f.text_field :height, class: "form-control", placeholder: "Height *", required: true %>
-            </div>
-
             
-              <%= f.submit "Sign up", class: "form-control btn-primary" %>
+            
+              <%= f.submit "Sign up", class: "form-control btn btn-form" %>
             
           </div>
           <% end %>
