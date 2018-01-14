@@ -106,10 +106,10 @@ nav a {
 .navbar-main li:hover .submenu {
   top: 62px;
   visibility: visible;
-  -moz-transition: all, 0.25s;
-  -o-transition: all, 0.25s;
-  -webkit-transition: all, 0.25s;
-  transition: all, 0.25s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  -webkit-transition: all, 0.5s;
+  transition: all, 0.5s;
 }
 .navbar-main .icon-bar {
   background: #ffffff !important;
@@ -351,8 +351,9 @@ nav a {
 /* Pages 
 ================================= */
 .page-heading {
-  background: url('assets/images/heading-bg.jpg?1428795369') no-repeat center;
+  background: url('/assets/images/heading-bg.jpg') no-repeat center;
   background-size: cover;
+  height: 30vh;
   min-height: 190px;
   color: #fff;
   padding: 25px 15px;
@@ -419,7 +420,7 @@ form .alert {
 /* Causes 
 ================================= */
 .cause-carousel {
-  margin-top: 15px;
+  /*margin-top: 15px;*/
   margin-bottom: 30px;
 }
 
@@ -809,11 +810,14 @@ form .alert {
 @media (max-width: 480px) {
   .carousel-home .carousel-title {
     font-size: 16px;
-    margin: 0;
+    margin: 15px 0px !important;
+  }
+   .carousel-inner > .item > img{
+    height: 40vh !important;
   }
   .carousel-home .carousel-subtitle {
     font-size: 14px;
-    margin: 0;
+    margin: 5px 0px !important;
   }
   .carousel-home .carousel-indicators {
     bottom: 0;

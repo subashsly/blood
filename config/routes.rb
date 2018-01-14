@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   resources :blood_requests
 
 
-   devise_for :users, controllers: {
+   devise_for :users,
+    path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' },
+    controllers: {
         sessions: 'users/sessions',
-        registrations: 'users/registrations'        
+        registrations: 'users/registrations' 
       }
   get "about", to: "static_pages#about"
   get "contact", to: "static_pages#contact"
