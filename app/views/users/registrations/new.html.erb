@@ -11,7 +11,7 @@
              <div class="row">
                 <div class="form-group col-md-6">
                   <%= f.label :first_name %><br />
-                  <%= f.text_field :first_name, class: "form-control", placeholder: "First Name *", required: true %>
+                  <%= f.text_field :first_name,autofocus: true, class: "form-control", placeholder: "First Name *", required: true %>
                 </div>
 
              <div class="form-group col-md-6">
@@ -22,7 +22,7 @@
 
             <div class="form-group col-md-12">
               <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email *", required: true %>
+              <%= f.email_field :email,  autocomplete: "email", class: "form-control", placeholder: "Email *", required: true %>
             </div>
 
             <div class="form-group col-md-6">
@@ -47,7 +47,7 @@
             </div>
             <div class="form-group col-md-6">
               <%= f.label :phone_no %><br />
-              <%= f.text_field :phone_no, class: "form-control", placeholder: "Phone no *", required: true %>
+              <%= f.number_field :phone_no, class: "form-control", placeholder: "Phone no *", required: true %>
             </div>
 
              <div class="form-group col-md-6">
@@ -56,16 +56,16 @@
             </div>
             <div class="form-group col-md-6">
               <%= f.label :times_donate %><br />
-              <%= f.text_field :times_donate, class: "form-control", placeholder: "Times Donate *", required: true %>
+              <%= f.number_field :times_donate, class: "form-control", placeholder: "Times Donate *", required: true %>
             </div>
             <div class="form-group col-md-6">
               <%= f.label :date_of_birth %><br />
-              <%= f.text_field :date_of_birth, class: "form-control", placeholder: "Date of birth *", required: true %>
+              <%= f.date_field :date_of_birth, class: "form-control", placeholder: "Date of birth *", required: true %>
             </div>
             
             <div class="form-group col-md-6">
               <%= f.label :weight %><br />
-              <%= f.text_field :weight, class: "form-control", placeholder: "Weight *", required: true %>
+              <%= f.number_field :weight, class: "form-control", placeholder: "Weight *", required: true %>
             </div>
 
              <div class="form-group col-md-6">

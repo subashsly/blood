@@ -20,14 +20,14 @@
 
     <div class="form-group col-md-6">
       <%= form.label :email %>
-      <%= form.text_field :email, id: :user_query_email, class: "form-control", placeholder: "Email*", :required => true %>
+      <%= form.email_field :email, id: :user_query_email, class: "form-control", placeholder: "Email*", :required => true %>
     </div>
   </div>
 
 <div class="row">
     <div class="form-group col-md-6">
     <%= form.label :phone_no %>
-    <%= form.text_field :phone_no, id: :user_query_phone_no, class: "form-control", placeholder: "Phone no.*", :required => true %>
+    <%= form.number_field :phone_no, id: :user_query_phone_no, class: "form-control", placeholder: "Phone no.*", :required => true %>
   </div>
 
     <div class="form-group col-md-6">
