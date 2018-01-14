@@ -69,7 +69,7 @@ config.secret_key = 'cbb20b88470b907fe6d7f93085f713884019327f6bf2d302fbbf969d25d
   # config.http_authenticatable = false
 
   # If 401 status code should be returned for AJAX requests. True by default.
-  # config.http_authenticatable_on_xhr = true
+  config.http_authenticatable_on_xhr = false
 
 
   # The realm used in Http Basic Authentication. 'Application' by default.

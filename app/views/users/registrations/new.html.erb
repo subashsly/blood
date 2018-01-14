@@ -36,30 +36,22 @@
               <%= f.label :password_confirmation %><br />
               <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password*", required: true %>
             </div> 
-
-           <div class="form-group col-md-6">
-              <%= f.label :phone_no %><br />
-              <%= f.text_field :phone_no, class: "form-control", placeholder: "Phone no *", required: true %>
+  <div class="form-group col-md-6">
+              <%= f.label :city %><br />
+              <%= f.select(:city, [ "kathmandu", "Bhaktapur", "Lalitpur"], { :prompt => 'Select City'}, { :class => 'form-control' }) %>
             </div>
-
-
-
-         
-             <div class="form-group col-md-6">
-              <%= f.label :telephone_no %><br />
-              <%= f.text_field :telephone_no, class: "form-control", placeholder: "Telephone_no *", required: true %>
-            </div>
+           
              <div class="form-group col-md-6">
               <%= f.label :address %><br />
               <%= f.text_field :address, class: "form-control", placeholder: "Address *", required: true %>
             </div>
-             <div class="form-group col-md-6">
-              <%= f.label :city %><br />
-              <%= f.text_field :city, class: "form-control", placeholder: "City *", required: true %>
+            <div class="form-group col-md-6">
+              <%= f.label :phone_no %><br />
+              <%= f.text_field :phone_no, class: "form-control", placeholder: "Phone no *", required: true %>
             </div>
+
              <div class="form-group col-md-6">
               <%= f.label :blood_group %><br />
-          
               <%= f.select(:blood_group, [ "O+ve", "O-ve", "A+ve","A-ve","B+ve","B-ve","AB+ve","AB-ve"], { :prompt => 'Select Blood Group'}, { :class => 'form-control' }) %>
             </div>
             <div class="form-group col-md-6">
@@ -67,24 +59,14 @@
               <%= f.text_field :times_donate, class: "form-control", placeholder: "Times Donate *", required: true %>
             </div>
             <div class="form-group col-md-6">
-              <%= f.label :zip_code %><br />
-              <%= f.text_field :zip_code, class: "form-control", placeholder: "Zip code *", required: true %>
-            </div>
-            <div class="form-group col-md-6">
               <%= f.label :date_of_birth %><br />
               <%= f.text_field :date_of_birth, class: "form-control", placeholder: "Date of birth *", required: true %>
-            </div>
-            <div class="form-group col-md-6">
-              <%= f.label :height %><br />
-              <%= f.text_field :height, class: "form-control", placeholder: "Height *", required: true %>
             </div>
             
             <div class="form-group col-md-6">
               <%= f.label :weight %><br />
               <%= f.text_field :weight, class: "form-control", placeholder: "Weight *", required: true %>
             </div>
-          
-
 
              <div class="form-group col-md-6">
               <%= f.label :gender %><br />
@@ -92,11 +74,6 @@
               <%= f.radio_button :gender, "female"%> Female
               </div>
 
-            
-
-           
-            
-            
               <%= f.submit "Sign up", class: "form-control btn btn-form" %>
             
           </div>

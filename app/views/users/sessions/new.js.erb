@@ -1,3 +1,10 @@
-$("#login-modal").html("<%= escape_javascript(render 'new') %>")
-$("#login-modal").modal("show")
+if ($('#login-modal').is(':visible') == true) {
+	  $('input:password').val('');
+	$("ul.errors").html("");
+	$("ul.errors").append($("<li />").html("Email or password incorrect!"))
+	}else{
+		$("#login-modal").html("<%= escape_javascript(render 'new') %>")
+		$("#login-modal").modal("show")
+
+}
 
