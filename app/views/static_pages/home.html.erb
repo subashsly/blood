@@ -45,9 +45,11 @@
 
                   <h2 class="carousel-title bounceInDown animated slow">Together we can improve their lives</h2>
                   <h4 class="carousel-subtitle bounceInUp animated slow"> So let's do it !</h4>
-                 <%if !user_signed_in? %>
-                  <%= link_to "JOIN WITH US", new_user_registration_path, class: "btn btn-lg btn-secondary  bounceInUp animated slow" %>
-                  <% end%>
+                 <<%if !user_signed_in? %>
+                  <%= link_to "JOIN WITH US", new_user_registration_path, class: "btn btn-lg hidden-xs btn-secondary  bounceInUp animated slow" %>
+                  <%= link_to "JOIN WITH US", new_user_registration_path, class: "btn btn-md hidden-lg hidden-md btn-secondary  bounceInUp animated slow" %>
+                  <% end %>
+
 
                 </div> <!-- /.carousel-caption -->
 
@@ -69,8 +71,10 @@
                   <h2 class="carousel-title bounceInDown animated slow" >Save a life, Give blood</h2>
                   <h4 class="carousel-subtitle bounceInUp animated slow">You can make the diffrence !</h4>
                    <%if !user_signed_in? %>
-                    <%= link_to "JOIN WITH US", new_user_registration_path, class: "btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" %>
-                  <% end%>
+                  <%= link_to "JOIN WITH US", new_user_registration_path, class: "btn btn-lg hidden-xs btn-secondary  bounceInUp animated slow" %>
+                  <%= link_to "JOIN WITH US", new_user_registration_path, class: "btn btn-md hidden-lg hidden-md btn-secondary  bounceInUp animated slow" %>
+                  <% end %>
+
                 </div> <!-- /.carousel-caption -->
 
               </div>
