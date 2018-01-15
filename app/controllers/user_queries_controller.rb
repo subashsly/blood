@@ -1,6 +1,7 @@
 class UserQueriesController < ApplicationController
   before_action :set_user_query, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:new, :create]
+  before_action :is_admin, except: [:new, :create, :index]
   # GET /user_queries
   # GET /user_queries.json
   def index

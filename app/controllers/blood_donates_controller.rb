@@ -1,6 +1,7 @@
 class BloodDonatesController < ApplicationController
   before_action :set_blood_donate, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :is_admin, except: [:index]
   # GET /blood_donates
   # GET /blood_donates.json
   def index
@@ -62,6 +63,9 @@ class BloodDonatesController < ApplicationController
   end
 
   private
+    
+   
+
     # Use callbacks to share common setup or constraints between actions.
     def set_blood_donate
       @blood_donate = BloodDonate.find(params[:id])

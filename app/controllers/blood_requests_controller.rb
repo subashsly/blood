@@ -1,7 +1,7 @@
 class BloodRequestsController < ApplicationController
   before_action :set_blood_request, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:new, :create]
-
+  before_action :is_admin, except: [:new, :create, :index]
   # GET /blood_requests
   # GET /blood_requests.json
   def index

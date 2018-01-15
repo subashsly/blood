@@ -1,6 +1,7 @@
 class NotificationsController < ApplicationController
   before_action :set_notification, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :is_admin, except: [:index]
 
   # GET /notifications
   # GET /notifications.json

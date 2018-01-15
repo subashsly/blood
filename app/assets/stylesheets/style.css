@@ -428,16 +428,15 @@ form .alert {
 	Module
 ========================================================================== */
 .btn-primary {
-  background: #FFFFFF !important;
-  color: #e54848 !important;
-  border: none !important;
-  border-radius:none !important;
+  background: none !important;
+  color: #FFFFFF !important;
+  border: 1px white solid !important;
+  border-radius:0px !important;
   padding: 10px 25px !important;
-  border: 1px solid transparent !important;
-  -moz-transition: all, 0.3s !important;
-  -o-transition: all, 0.3s !important;
-  -webkit-transition: all, 0.3s !important;
-  transition: all, 0.3s !important;
+  -moz-transition: all 0.5s ease !important;
+  -o-transition: all 0.5s ease !important;
+  -webkit-transition: all 0.5s ease !important;
+  transition: all 0.5s ease !important;
 }
 .btn-primary:hover {
   background: #fff !important;
@@ -452,14 +451,13 @@ form .alert {
   border-radius:none !important;
   padding: 5px 25px !important;
   border: 1px solid transparent !important;
-  -moz-transition: all, 0.3s !important;
-  -o-transition: all, 0.3s !important;
-  -webkit-transition: all, 0.3s !important;
-  transition: all, 0.3s !important;
+  -moz-transition: all 0.3s ease !important;
+  -o-transition: all  0.3s  ease !important;
+  -webkit-transition: all 0.3s ease !important;
+  transition: all 0.3s ease !important;
 }
 .btn-form:hover {
-  background: #fff !important;
-  color: #E44847 !important;
+  background: #dc1b19 !important;
   border: 1px solid #E44847 !important;
 }
 
@@ -467,10 +465,14 @@ form .alert {
   background: #fff;
   color: #E44847;
   border-radius: 0;
+  -moz-transition: all, 0.4s !important;
+  -o-transition: all, 0.4s !important;
+  -webkit-transition: all, 0.4s !important;
+  transition: all 0.4s ease !important;
 }
 .btn-secondary:hover {
   background: #E44847;
-  color: #fff;
+  color: #fff !important;
 }
 
 .title-style-1 {
